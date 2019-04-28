@@ -1,0 +1,6 @@
+<!--pages/catalog/catalog.wxml-->
+<view class='catalog-container'>
+  <view class='list' wx:for="{{dataList}}" wx:key="{{index}}" bindtap='linkTo' data-id="{{index}}" >
+    {{item.title}}
+  </view>
+</view>

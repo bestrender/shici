@@ -1,0 +1,10 @@
+<!--pages/user/index.wxml-->
+<view class='user-container'>
+  <view class='author'><image src="/static/img/user/author.png" mode='aspectFit'></image></view>
+  <!-- <view class='author-name'>素墨兰馨</view> -->
+  <view class='author-name'><image src="/static/img/user/icon.png" mode='aspectFit'></image></view>
+  <view class='author-desc'>
+    <view>广交诗界好友</view>
+    <view>发扬诗词魅力</view>
+  </view>
+</view>

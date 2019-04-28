@@ -1,0 +1,135 @@
+<!--index.wxml-->
+<view class="container wx-flex">
+  <!-- 作者信息 -->
+  <view class='author_view wx-box'>
+    <view class='author_icon'>
+      <image src="/static/img/user/author.png"></image>
+    </view>
+    <view class='author_info item'>
+      <view class='author_name'>作者：素墨兰馨</view>
+      <view class='author_date'>变者化之渐，化者变之成。物所受为性，天所赋为命！</view>
+    </view>
+    <view class='autohr_follow viewer_range'>
+      <button class='list' open-type="share">
+        <view class='icon fenxiang'></view>
+        <view class='text'>分享</view>
+      </button>
+    </view>
+  </view>
+  <!-- 作者信息 -->
+
+  <!-- 诗词 -->
+  <swiper class='content_view flex' bindchange="swiperChange" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{actIndex}}">
+    <block wx:for="{{dataList}}" wx:key="{{index}}" circular="circular">
+      <swiper-item class="wx-flex">
+
+        <!-- <view class='author_view wx-box'>
+          <view class='author_icon'>
+            <image src="/static/img/user.png"></image>
+          </view>
+          <view class='author_info item'>
+            <view class='author_name'>作者：{{item.author}}</view>
+            <view class='author_date'>发表于：2018-10-17 14：25</view>
+          </view>
+          <view class='autohr_follow'>
+            <view class='guanzhu {{item.is_guanzhu ? "act" : ""}}'></view>
+            <view>关注TA</view>
+          </view>
+        </view> -->
+
+        <view class='sc_view flex'>
+          <view class='sc_img'><image wx:if="{{item.pic}}" src="{{item.pic}}" mode='aspectFill' class="slide-image" /></view>`
+          <view class='sc_title'>{{item.title}}</view>
+          <view class='sc_content'>
+            <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-item="list" class='list'>{{list}}</view>
+            <view class='sc_notes' wx:if="{{item.notes}}">{{item.notes}}</view>
+          </view>
+        </view>
+
+        <!-- 互动区 -->
+        <!-- <view class='viewer_range bottom-right-fixed'> -->
+
+          <!-- <view class='list'>
+            <view class='icon pinglun'></view>
+            <view class='text'>评论</view>
+          </view>
+          <view class='list'>
+            <view class='icon dianzan {{item.is_dianzan ? "act" : ""}}'></view>
+            <view class='text'>点赞</view>
+          </view> -->
+          <!-- <view class='list'>
+              <view class='icon liulan'></view>
+              <view class='text'>浏览</view>
+            </view> -->
+          <!-- <view class='list'>
+              <view class='icon guanzhu act'></view>
+              <view class='text'>关注</view>
+            </view> -->
+          <!-- <view class='list'>
+            <view class='icon shoucang {{item.is_shoucang ? "act" : ""}}'></view>
+            <view class='text'>收藏</view>
+          </view> -->
+          <!-- <button class='list' open-type="share"><view class='icon fenxiang'></view>分享</button> -->
+          <!-- <view class='list'>
+            <view class='icon fenxiang'></view>
+            <view class='text'>分享</view>
+          </view> -->
+        <!-- </view> -->
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 诗词 -->
+  
+  <!-- <view class='viewer_range'>
+    <view class='wx-box bor-bottom'>
+      <view class='list item bor-right'>
+        <view class='icon pinglun'></view>
+        <view class='text'>评论 0</view>
+      </view>
+      <view class='list item bor-right'>
+        <view class='icon dianzan'></view>
+        <view class='text'>点赞 0</view>
+      </view>
+      <view class='list item'>
+        <view class='icon liulan'></view>
+        <view class='text'>浏览 0</view>
+      </view>
+    </view>
+    <view class='wx-box'>
+      <view class='list item bor-right'>
+        <view class='icon guanzhu act'></view>
+        <view class='text'>关注作者</view>
+      </view>
+      <view class='list item bor-right'>
+        <view class='icon shoucang'></view>
+        <view class='text'>收藏作品</view>
+      </view>
+      <view class='list item'>
+        <view class='icon fenxiang'></view>
+        <view class='text'>分享作品</view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 作品评论 -->
+  <!-- <view class='pinglun_view'>
+    <view class='pinglun_title bor-bottom'>作品评论</view>
+    <view class='pinglun_menu' wx:if="{{pinglunData.length}}">
+      <view class='pinglun_list bor-bottom'>
+        <view class="pinglun_userinfo wx-box ">
+          <view class='user_icon'><image src=""></image></view>
+          <view class='user_name item'>小明</view>
+        </view>
+        <view class='pinglun_list_content'>
+          好,阿斯顿发送到发送到发斯蒂芬
+        </view>
+      </view>
+      <view class='pinglun_btn' bindtap='to_pinglun'>我来留下足迹</view>
+    </view>
+    <view class='pinglun_noData' wx:else>
+      <view class='pinglun_btn' bindtap='to_pinglun'>我来留下足迹</view>
+    </view>
+  </view> -->
+
+
+</view>

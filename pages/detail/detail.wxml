@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container wx-flex">
+  <!-- 作者信息 -->
+  <view class='author_view wx-box'>
+    <view class='author_icon'>
+      <image src="/static/img/user/author.png"></image>
+    </view>
+    <view class='author_info item'>
+      <view class='author_name'>作者：素墨兰馨</view>
+      <view class='author_date'>变者化之渐，化者变之成。物所受为性，天所赋为命！</view>
+    </view>
+    <view class='autohr_follow viewer_range'>
+      <button class='list' open-type="share">
+        <view class='icon fenxiang'></view>
+        <view class='text'>分享</view>
+      </button>
+    </view>
+  </view>
+  <!-- 作者信息 -->
+
+  <!-- 诗词 -->
+  <view class='sc_view flex'>
+    <view class='sc_img'><image wx:if="{{dataItem.pic}}" src="{{dataItem.pic}}" mode='aspectFill' class="slide-image" /></view>`
+    <view class='sc_title'>{{dataItem.title}}</view>
+    <view class='sc_content'>
+      <view wx:for="{{dataItem.content}}" wx:key="{{index}}" wx:for-item="list" class='list'>{{list}}</view>
+      <view class='sc_notes' wx:if="{{dataItem.notes}}">{{dataItem.notes}}</view>
+    </view>
+  </view>
+  <!-- 诗词 -->
+
+  <view class='viewer_range bottom-right-fixed'>
+    <view class='list' bindtap='backIndex' wx:if="{{showBack}}">
+      <view class='icon back'></view>
+      <view class='text'>更多作品</view>
+    </view>
+  </view>
+</view>

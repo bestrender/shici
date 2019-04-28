@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/catalog/catalog",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#666",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "作品欣赏",
+        "iconPath": "static/img/common/index.png",
+        "selectedIconPath": "static/img/common/index_act.png"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "text": "作品列表",
+        "iconPath": "static/img/common/cata.png",
+        "selectedIconPath": "static/img/common/cata_act.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "关于作者",
+        "iconPath": "static/img/common/user.png",
+        "selectedIconPath": "static/img/common/user_act.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,17 @@
+/* pages/catalog/catalog.wxss */
+.catalog-container{
+  padding: 16px;
+}
+.catalog-container .list{
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #333;
+  font-size: 14px;
+  text-indent: 20rpx;
+}
+.catalog-container .list:nth-child(odd){
+  background: #f9f9f9;
+}
+.catalog-container .list:active{
+  background: #eee;
+}
